@@ -7,26 +7,52 @@ description: Creates interactive D3.js hierarchy visualizations with 4 view mode
 
 Interactive multi-view visualization for hierarchical data using D3.js.
 
-## Quick Start
+## When to Use This Skill
 
+Use when the user wants to visualize their PRD, project requirements, or any hierarchical JSON data. The visualizer reads from a JSON file and renders it as an interactive diagram.
+
+## Agent Instructions
+
+### Step 1: Identify the PRD JSON file
+Ask the user for the path to their PRD JSON file, or look for common filenames:
+- `prd.json`
+- `requirements.json`
+- `hierarchy.json`
+- Any `.json` file in their project folder
+
+### Step 2: Link the PRD to the visualizer
+
+The HTML file loads `requirements-hierarchy.json` by default. You have two options:
+
+**Option A: Copy visualizer to project folder (Recommended)**
 ```bash
-python3 -m http.server 8080
-open http://localhost:8080/hierarchy-visualizer.html
+# Copy visualizer files to user's project
+cp hierarchy-visualizer.html d3.min.js /path/to/user/project/
+
+# Rename or symlink their PRD to the expected filename
+ln -s /path/to/user/project/their-prd.json /path/to/user/project/requirements-hierarchy.json
+
+# Start server from their project folder
+cd /path/to/user/project && python3 -m http.server 8080
 ```
 
-## Usage
-
-The visualizer loads JSON data from `requirements-hierarchy.json` by default (example included). To visualize your own PRD or project data:
-
-**Option 1: Replace the example file**
+**Option B: Copy PRD to visualizer folder**
 ```bash
-cp /path/to/your/project/prd.json assets/requirements-hierarchy.json
+# Copy user's PRD to replace the example
+cp /path/to/user/project/prd.json assets/requirements-hierarchy.json
+
+# Start server from assets folder
+cd assets && python3 -m http.server 8080
 ```
 
-**Option 2: Serve from your project folder**
-Copy `hierarchy-visualizer.html` and `d3.min.js` to your project folder, then update the JSON path in the HTML or rename your PRD file to `requirements-hierarchy.json`.
+### Step 3: Open in browser
+```
+http://localhost:8080/hierarchy-visualizer.html
+```
 
 ## Data Format
+
+The PRD JSON must follow this structure:
 
 ```json
 {
@@ -44,9 +70,13 @@ Copy `hierarchy-visualizer.html` and `d3.min.js` to your project folder, then up
 }
 ```
 
-**Required:** `id` (unique), `title` (display name), `status` (`todo`/`processing`/`problem`/`done`), `children` (array)
+**Required fields:**
+- `id` — unique identifier (string)
+- `title` — display name (string)
+- `status` — one of: `todo`, `processing`, `problem`, `done`
+- `children` — array of child nodes (empty array for leaves)
 
-**Optional:** `type`, `domain`, `stage`, `owning_sig`, `granularity`, `complexity`, `source_url`, `goals`
+**Optional fields:** `type`, `domain`, `stage`, `owning_sig`, `granularity`, `complexity`, `source_url`, `goals`
 
 ## View Modes
 
@@ -75,6 +105,6 @@ Copy `hierarchy-visualizer.html` and `d3.min.js` to your project folder, then up
 
 **Blank visualization?** → Use local HTTP server, not `file://`
 
-**JSON not loading?** → Check browser console for errors
+**JSON not loading?** → Check that `requirements-hierarchy.json` exists in the same folder as the HTML file
 
 **Need custom styling?** → See `references/customization.md`
