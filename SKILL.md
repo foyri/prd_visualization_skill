@@ -9,16 +9,20 @@ Interactive multi-view visualization for hierarchical data using D3.js.
 
 ## When to Use This Skill
 
-Use when the user wants to visualize their PRD, project requirements, or any hierarchical JSON data. The visualizer reads from a JSON file and renders it as an interactive diagram.
+Use when the user wants to visualize their PRD, project requirements, or any hierarchical data. The visualizer reads from a JSON file and renders it as an interactive diagram.
 
 ## Agent Instructions
 
-### Step 1: Identify the PRD JSON file
-Ask the user for the path to their PRD JSON file, or look for common filenames:
-- `prd.json`
-- `requirements.json`
-- `hierarchy.json`
-- Any `.json` file in their project folder
+### Step 1: Find or create the PRD JSON file
+
+**If user has a PRD in Markdown/text format:**
+Convert it to hierarchical JSON format. Read the PRD file and create a JSON structure with:
+- Root node = Project/PRD title
+- Children = Sections, features, requirements
+- Status = todo/processing/problem/done (infer from context or default to "todo")
+
+**If user already has a JSON file:**
+Use that file directly (check for `prd.json`, `requirements.json`, `hierarchy.json`)
 
 ### Step 2: Copy visualizer to project folder
 
@@ -26,8 +30,10 @@ Ask the user for the path to their PRD JSON file, or look for common filenames:
 # Copy visualizer files to user's project
 cp hierarchy-visualizer.html d3.min.js /path/to/user/project/
 
-# Copy their PRD as requirements-hierarchy.json (the filename the HTML expects)
-cp /path/to/user/project/their-prd.json /path/to/user/project/requirements-hierarchy.json
+# Save the JSON as requirements-hierarchy.json
+cat > /path/to/user/project/requirements-hierarchy.json << 'EOF'
+{paste the JSON here}
+EOF
 
 # Start server from their project folder
 cd /path/to/user/project && python3 -m http.server 8080
@@ -40,7 +46,7 @@ http://localhost:8080/hierarchy-visualizer.html
 
 ## Data Format
 
-The PRD JSON must follow this structure:
+Convert PRD content to this JSON structure:
 
 ```json
 {
