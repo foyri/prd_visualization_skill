@@ -20,11 +20,8 @@ Ask the user for the path to their PRD JSON file, or look for common filenames:
 - `hierarchy.json`
 - Any `.json` file in their project folder
 
-### Step 2: Link the PRD to the visualizer
+### Step 2: Copy visualizer to project folder
 
-The HTML file loads `requirements-hierarchy.json` by default. You have two options:
-
-**Option A: Copy visualizer to project folder (Recommended)**
 ```bash
 # Copy visualizer files to user's project
 cp hierarchy-visualizer.html d3.min.js /path/to/user/project/
@@ -34,15 +31,6 @@ ln -s /path/to/user/project/their-prd.json /path/to/user/project/requirements-hi
 
 # Start server from their project folder
 cd /path/to/user/project && python3 -m http.server 8080
-```
-
-**Option B: Copy PRD to visualizer folder**
-```bash
-# Copy user's PRD to replace the example
-cp /path/to/user/project/prd.json assets/requirements-hierarchy.json
-
-# Start server from assets folder
-cd assets && python3 -m http.server 8080
 ```
 
 ### Step 3: Open in browser
