@@ -1,9 +1,9 @@
 ---
 name: hierarchy-visualizer
-description: Creates interactive D3.js hierarchy visualizations with 4 view modes (Fractal Tree, Notion List, Force-Directed, Radial Cluster). Use when user wants to visualize tree structures, hierarchical data, PRDs, requirements, org charts, file structures, or says "visualize hierarchy", "tree view", "show structure", "render tree", "hierarchy diagram".
+description: Creates interactive D3.js hierarchy visualizations with multiple view modes (Notion List, Force-Directed, Radial Cluster, with Fractal Tree coming soon). Use when user wants to visualize tree structures, hierarchical data, PRDs, requirements, org charts, file structures, or says "visualize hierarchy", "tree view", "show structure", "render tree", "hierarchy diagram". Always use this skill when user wants to visualize their PRD (project requirements), project requirements, or any hierarchical data.
 ---
 
-# Hierarchy Visualizer
+# Hierarchy Visualizer v1.0.0
 
 Interactive multi-view visualization for hierarchical data using D3.js.
 
@@ -44,8 +44,8 @@ cd /path/to/user/project && python3 -m http.server 8080
 http://localhost:8080/hierarchy-visualizer.html
 ```
 
-### Maintenance
-Always keep the prd json file updated in the whole project development process.
+### Maintenance (IMPORTANT)
+Always keep the prd json file updated in the whole project development process, everytime a requirement/specification/feature is added, updated, status changed, or deleted, update the json file accordingly.
 
 ## Data Format
 
@@ -78,9 +78,10 @@ Convert PRD content to this JSON structure:
 ## View Modes
 
 - **Notion List** — Collapsible hierarchical list (default)
-- **Fractal Tree** — Radial branching with physics
 - **Force-Directed** — Draggable node-link diagram
 - **Radial Cluster** — Circular dendrogram
+
+> **Note:** Fractal Tree view is currently under development and will be available in a future release. Stay tuned for updates!
 
 ## Controls
 
