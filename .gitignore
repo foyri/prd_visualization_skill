@@ -1,10 +1,6 @@
-# Development & documentation files (not part of skill)
+# Documentation files (not part of skill runtime)
 RELEASE_CHECKLIST.md
-skill-distribution-platforms.md
-package.sh
-
-# Build artifacts
-dist/
+skill-distribution-platforms建议
 
 # macOS system files
 .DS_Store
