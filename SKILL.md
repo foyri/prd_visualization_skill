@@ -14,6 +14,18 @@ python3 -m http.server 8080
 open http://localhost:8080/hierarchy-visualizer.html
 ```
 
+## Usage
+
+The visualizer loads JSON data from `requirements-hierarchy.json` by default (example included). To visualize your own PRD or project data:
+
+**Option 1: Replace the example file**
+```bash
+cp /path/to/your/project/prd.json assets/requirements-hierarchy.json
+```
+
+**Option 2: Serve from your project folder**
+Copy `hierarchy-visualizer.html` and `d3.min.js` to your project folder, then update the JSON path in the HTML or rename your PRD file to `requirements-hierarchy.json`.
+
 ## Data Format
 
 ```json
