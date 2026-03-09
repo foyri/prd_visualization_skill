@@ -101,4 +101,4 @@ Convert PRD content to this JSON structure:
 
 **JSON not loading?** → Check that `requirements-hierarchy.json` exists in the same folder as the HTML file
 
-**Need custom styling?** → See `references/customization.md`
+**Need custom styling?** → Edit CSS variables in `hierarchy-visualizer.html` (~line 78)
