@@ -7,8 +7,13 @@ Interactive D3.js-based hierarchy visualization for product requirements, projec
 
 ## ⚡ One-Line Installation
 
-**Tell your AI agent:**
+### Via AI Agent Prompt
 > "Install the PRD Visualization skill from https://github.com/foyri/prd_visualization_skill"
+
+### Via Curl (Quick Download)
+```bash
+curl -fsSL https://raw.githubusercontent.com/foyri/prd_visualization_skill/main/assets/hierarchy-visualizer.html -o hierarchy-visualizer.html && open hierarchy-visualizer.html
+```
 
 ## 🎯 What It Does
 
