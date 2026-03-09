@@ -7,12 +7,28 @@ Interactive D3.js-based hierarchy visualization for product requirements, projec
 
 ## 🎯 What It Does
 
-Transforms hierarchical JSON data into beautiful, interactive visualizations with 4 view modes:
+Transforms hierarchical JSON data into beautiful, interactive visualizations with multiple view modes:
 
-- **Fractal Tree** — Radial branching with physics-based layout
 - **Notion List** — Collapsible hierarchical list (default)
 - **Force-Directed** — Draggable node-link diagram
 - **Radial Cluster** — Circular dendrogram
+
+## 🗺️ Roadmap
+
+### Current (v1.0.0)
+- ✅ Notion List view
+- ✅ Force-Directed view
+- ✅ Radial Cluster view
+- ✅ Light/Dark theme toggle
+- ✅ Zoom & pan
+- ✅ Status filtering
+- ✅ Auto-sync
+
+### Coming Soon
+- 🚧 **Fractal Tree** — Radial branching with physics-based layout (in development)
+- 📋 Export to PNG/SVG
+- 📋 Collaborative editing
+- 📋 Real-time WebSocket updates
 
 ## 📦 Installation
 
