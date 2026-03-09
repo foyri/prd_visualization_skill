@@ -2,7 +2,7 @@
 # Package skill for distribution
 
 SKILL_NAME="hierarchy-visualizer"
-VERSION="1.0.0"
+VERSION=$(cat VERSION)
 
 echo "📦 Packaging $SKILL_NAME v$VERSION..."
 

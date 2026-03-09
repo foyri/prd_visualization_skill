@@ -1,9 +1,10 @@
 ---
 name: hierarchy-visualizer
+version: 1.0.0
 description: Creates interactive D3.js hierarchy visualizations with 4 view modes (Fractal Tree, Notion List, Force-Directed, Radial Cluster). Use when user wants to visualize tree structures, hierarchical data, PRDs, requirements, org charts, file structures, or says "visualize hierarchy", "tree view", "show structure", "render tree", "hierarchy diagram".
 ---
 
-# Hierarchy Visualizer
+# Hierarchy Visualizer v1.0.0
 
 Interactive multi-view visualization for hierarchical data using D3.js.
 
