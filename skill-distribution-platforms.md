@@ -90,7 +90,17 @@ description: Visualize PRD requirements as interactive D3.js hierarchies
 
 ---
 
-## 4. Other Platforms
+## 4. MCP Market
+
+**Website:** https://mcpmarket.com
+
+- MCP (Model Context Protocol) server marketplace
+- Focuses on AI-native tools and integrations
+- **Publish:** Submit your MCP server/skill for listing
+
+---
+
+## 5. Other Platforms
 
 | Platform | URL | Notes |
 |----------|-----|-------|
@@ -171,6 +181,7 @@ How to know the task is complete.
    ```
 4. **Vercel Skills** - Already discoverable via GitHub repo URL
 5. **Submit to SkillsMP** - Manual submission or via GitHub
+6. **Submit to MCP Market** - Visit https://mcpmarket.com to list your MCP server/skill
 
 ---
 
@@ -181,6 +192,7 @@ How to know the task is complete.
 | Clawhub | Post-publish moderation | Public registry | `clawhub install <slug>` |
 | Vercel Skills | None (telemetry-based) | GitHub-driven | `npx skills add <repo>` |
 | SkillsMP | Auto-indexed | Public marketplace | Download or CLI |
+| MCP Market | Manual submission | MCP-focused | Via website |
 
 ---
 

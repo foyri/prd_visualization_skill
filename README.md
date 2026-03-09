@@ -26,9 +26,6 @@ Transforms hierarchical JSON data into beautiful, interactive visualizations wit
 
 ### Coming Soon
 - 🚧 **Fractal Tree** — Radial branching with physics-based layout (in development)
-- 📋 Export to PNG/SVG
-- 📋 Collaborative editing
-- 📋 Real-time WebSocket updates
 
 ## 📦 Installation
 
