@@ -9,14 +9,14 @@ Interactive D3.js-based hierarchy visualization for product requirements, projec
 
 Transforms hierarchical JSON data into beautiful, interactive visualizations with multiple view modes:
 
-- **Notion List** — Collapsible hierarchical list (default)
+- **List** — Collapsible hierarchical list (default)
 - **Force-Directed** — Draggable node-link diagram
 - **Radial Cluster** — Circular dendrogram
 
 ## 🗺️ Roadmap
 
 ### Current (v1.0.0)
-- ✅ Notion List view
+- ✅ List view
 - ✅ Force-Directed view
 - ✅ Radial Cluster view
 - ✅ Light/Dark theme toggle
