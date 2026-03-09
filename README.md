@@ -5,6 +5,11 @@ Interactive D3.js-based hierarchy visualization for product requirements, projec
 [![Clawhub](https://img.shields.io/badge/Clawhub-Install-blue)](https://clawhub.ai)
 [![Skills](https://img.shields.io/badge/Vercel%20Skills-Add-green)](https://skills.sh)
 
+## ⚡ One-Line Installation
+
+**Tell your AI agent:**
+> "Install the PRD Visualization skill from https://github.com/foyri/prd_visualization_skill"
+
 ## 🎯 What It Does
 
 Transforms hierarchical JSON data into beautiful, interactive visualizations with multiple view modes:
