@@ -1,6 +1,12 @@
 # Documentation files (not part of skill runtime)
 RELEASE_CHECKLIST.md
-skill-distribution-platforms建议
+skill-distribution-platforms.md
+
+# Build artifacts
+dist/
+
+# Scripts
+package.sh
 
 # macOS system files
 .DS_Store
@@ -8,7 +14,6 @@ __MACOSX/
 
 # Git
 .git/
-.gitignore
 
 # Node/npm (if applicable)
 node_modules/
