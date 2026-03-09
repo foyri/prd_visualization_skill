@@ -26,8 +26,8 @@ Ask the user for the path to their PRD JSON file, or look for common filenames:
 # Copy visualizer files to user's project
 cp hierarchy-visualizer.html d3.min.js /path/to/user/project/
 
-# Rename or symlink their PRD to the expected filename
-ln -s /path/to/user/project/their-prd.json /path/to/user/project/requirements-hierarchy.json
+# Copy their PRD as requirements-hierarchy.json (the filename the HTML expects)
+cp /path/to/user/project/their-prd.json /path/to/user/project/requirements-hierarchy.json
 
 # Start server from their project folder
 cd /path/to/user/project && python3 -m http.server 8080
